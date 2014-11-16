@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Milestone for Capstone project </title>
+
+
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<h1>Milestone for Capstone project </h1>
+
+<p>The goal of this report is to perform an exploratory analysis, explain the major features and outline my plans for the eventual app and algorithm.</p>
+
+<p>It contains basic summaries such as word counts, line counts and others as well as different plots to better represent the data.</p>
+
+<p>I used three data sets for this analysis containing: blogs, news and twitter data.</p>
+
+<p>R code chunk publication has been avoid to allow that a a non-data scientist person understand it.</p>
+
+<h1>Basic summary</h1>
+
+<p>The following table shows the number of lines and words in each file as well as the average number of characters in the entries of each file:</p>
+
+<pre><code>Dataset             Number of Lines   Number of Words     Average number of characters
+en_US.blogs.txt     899,288           37,541,795          231.7
+en_US.news.txt       77,259            34,762,303          203
+en_US.twitter.txt   2,360,148         30,092,866          68.8
+</code></pre>
+
+<h1>Data cleaning and exploratory analysis</h1>
+
+<p>To provide a more insightful analysis, the data have been clean applying different techniques: transforming all the letters to lower case, removing the numbers and punctuation, and eliminating the stop words en English.</p>
+
+<p>I selected a 1% sample of the data to plot the most frequent words in each file, represented in the charts below:</p>
+
+<p><img src="bar.png" alt="alt text">
+<img src="cloud.png" alt="alt text"></p>
+
+<h1>Planned method to develop the model</h1>
+
+<ol>
+<li>Creating the frequencies of the 2 and 3-grams. Understandin how the words link together</li>
+<li>Produce an algorithm that identifies the word with the maximum probabity to appear next. </li>
+</ol>
+
+<p>This will require further investigation on the natural language processing techniques and the functions that R offers.</p>
+
+</body>
+
+</html>
